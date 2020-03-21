@@ -175,7 +175,7 @@ public class EscalonadorBase {
 		if (processoExiste(nomeProcesso))
 			throw new EscalonadorException();
 
-		if ((nomeProcesso == null) && (duracao <= 0))
+		if ((nomeProcesso == null) || (duracao <= 0))
 			throw new EscalonadorException();
 
 		Processo processo = new Processo(duracao, this.tick, nomeProcesso);
@@ -185,6 +185,7 @@ public class EscalonadorBase {
 			Collections.sort(ListaDeProcessos);
 	}
 
+	
 	public TipoEscalonador getTipo() {
 		return tipoEscalonador;
 	}
@@ -192,4 +193,5 @@ public class EscalonadorBase {
 	public void setTipo(TipoEscalonador tipo) {
 		this.tipoEscalonador = tipo;
 	}
+	
 }
