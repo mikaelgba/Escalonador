@@ -7,10 +7,10 @@ public class EscalonadorRoundRobin extends EscalonadorBase {
 
 	public EscalonadorRoundRobin() {
 		
-		ListaDeProcessos = new ArrayList<>();
+		ListaDeProcessos = new ArrayList<Processo>();
 		tipoEscalonador = TipoEscalonador.RoundRobin;
-		listaDeProcessosBloqueados = new ArrayList<>();
-		listaDeProcessosRetomados = new ArrayList<>();
+		listaDeProcessosBloqueados = new ArrayList<Processo>();
+		listaDeProcessosRetomados = new ArrayList<Processo>();
 		this.quantum = 3;
 	}
 
@@ -22,7 +22,7 @@ public class EscalonadorRoundRobin extends EscalonadorBase {
 		if (rodando != null) 
 			throw new EscalonadorException();
 		
-		ListaDeProcessos = new ArrayList<>();
+		ListaDeProcessos = new ArrayList<Processo>();
 		tipoEscalonador = TipoEscalonador.RoundRobin;
 		listaDeProcessosBloqueados = new ArrayList<Processo>();
 		this.quantum = quantum;

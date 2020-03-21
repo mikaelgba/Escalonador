@@ -2,6 +2,7 @@ package br.ufpb.dcx.aps.escalonador;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class EscalonadorPrioridade extends EscalonadorBase {
 	public EscalonadorPrioridade() {
@@ -116,5 +117,4 @@ public class EscalonadorPrioridade extends EscalonadorBase {
 			}
 		}
 	}
-
 }

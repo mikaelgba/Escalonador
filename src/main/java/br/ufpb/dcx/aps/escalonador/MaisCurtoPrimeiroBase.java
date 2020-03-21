@@ -1,6 +1,6 @@
 package br.ufpb.dcx.aps.escalonador;
 
-public class EscalonadorMaisCurtoPrimeiroBase implements CriadorTipo {
+public class MaisCurtoPrimeiroBase implements CriadorTipo {
 	
 	@Override
 	public EscalonadorBase criarEscalonador() {

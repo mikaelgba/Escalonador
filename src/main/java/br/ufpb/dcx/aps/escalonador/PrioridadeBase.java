@@ -1,4 +1,4 @@
-ge br.ufpb.dcx.aps.escalonador;
+package br.ufpb.dcx.aps.escalonador;
 
 public class PrioridadeBase implements CriadorTipo {
 	

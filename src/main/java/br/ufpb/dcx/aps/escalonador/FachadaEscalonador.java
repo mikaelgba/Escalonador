@@ -1,5 +1,7 @@
 package br.ufpb.dcx.aps.escalonador;
 
+import br.ufpb.dcx.aps.escalonador.command.Command;
+
 public class FachadaEscalonador {
 	
 	private EscalonadorBase escalonadorBase;
