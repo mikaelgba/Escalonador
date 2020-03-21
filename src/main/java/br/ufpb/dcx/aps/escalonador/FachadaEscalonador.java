@@ -18,4 +18,30 @@ public class FachadaEscalonador {
 		criadorTipo = gerarTipo(tipoEscalonador);
 		escalonadorBase = criadorTipo.criarEscalonador();
 	}
+	public FachadaEscalonador(TipoEscalonador tipoEscalonador, int quantum) {
+		
+		if(tipoEscalonador == null  && quantum <= 0) throw new EscalonadorException();
+		
+		criadorTipo = gerarTipo(tipoEscalonador);
+		escalonadorBase = criadorTipo.criarEscalonador(quantum);
+	}
+
+	private CriadorTipo gerarTipo(TipoEscalonador tipoEscalonador){
+		
+		if (tipoEscalonador == TipoEscalonador.Fifo) {
+			return new FifoBase();
+			
+		}else if (tipoEscalonador == TipoEscalonador.MaisCurtoPrimeiro ) {
+			return new MaisCurtoPrimeiroBase();
+			
+		}else if( tipoEscalonador == TipoEscalonador.Prioridade){
+			return new PrioridadeBase();
+			
+		}else if(tipoEscalonador == TipoEscalonador.RoundRobin){
+			return new RoundRobinBase();
+			
+		}else{
+			return null;
+		}
+	}
 }
