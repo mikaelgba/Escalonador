@@ -9,7 +9,7 @@ public class EscalonadorFifo extends EscalonadorBase {
 		this.ListaDeProcessos = new ArrayList<Processo>();
 		this.tipoEscalonador = TipoEscalonador.Fifo;
 		this.listaDeProcessosBloqueados = new ArrayList<Processo>();
-		this.listaDeProcessosRetomados = new ArrayList<>();
+		this.listaDeProcessosRetomados = new ArrayList<Processo>();
 		this.quantum = 0;
 	}
 
